@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<script type="text/javascript" src="d3.v3.min.js"></script>
+	</head>
+	<body>
+		<p>This is a paragraph</p>
+		<script type="text/javascript">
+			d3.select("p").text("Hello Word!");
+			
+			var BasicTest = d3.select("body")
+							.append("p")
+							.style("color", "red")
+							.text("Hi, whats up?");
+			
+			var canvas = d3.select("body")
+							.append("svg")
+							.attr("width", 500)
+							.attr("height", 500);
+
+			var circle = canvas.append("circle")
+								.attr("cx", 250)
+								.attr("cy", 250) 
+								.attr("r", 50)
+								.attr("fill", "yellow");
+
+			var rect = canvas.append("rect")
+							.attr("width", 100)
+							.attr("height", 50);
+
+			var line = canvas.append("line")
+							.attr("x1", 0)
+							.attr("y1", 100)
+							.attr("x2", 400)
+							.attr("y2", 400)
+							.attr("stroke", "blue")
+							.attr("stroke-width", 10);
+
+			console.log(d3);
+		</script>
+	</body>
+</html>
